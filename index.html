@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Metafora Corp</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">METAFORA CORP</a></div>
+            <ul class="link">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">Corporate Responbility</a></li>
+                <li><a href="#">Contact US</a></li>
+            </ul>
+            <a href="#" class="action_btn">Login</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="languange_btn">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Who we are</a></li>
+            <li><a href="#">Corporate Responbility</a></li>
+            <li><a href="#">Contact US</a></li>
+            <li><a href="#" class="action_btn">Login</a></li>
+        </div>
+    </header>
+
+<main>
+    <section id="hero">
+      <h1>METAFORA CORP</h1>
+      <p>Metafora Corp is an ERP Developer Company based in Central Java,<br /> 
+        Indonesia, that is active in several industries.</p>
+    </section>
+</main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
