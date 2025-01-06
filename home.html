@@ -2,10 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link href="assets/images/Logo.png" rel="icon">
+    <link href="assets/images/Logo.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Metafora Corp</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header class="main-header">
       <div class="container">
@@ -13,16 +21,28 @@
         <nav class="navbar">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Who We Are</a></li>
-            <li><a href="#">Corporate Responsibility</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="who we are.html">Who We Are</a></li>
+            <li><a href="corporate responbility.html">Corporate Responsibility</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
           </ul>
         </nav>
         <div class="header-actions">
           <button class="login-btn">Login</button>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
           <button class="language-btn">🌐</button>
         </div>
+      </div>
+    
+      <div class="dropdown_menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="blog.html">Blogs</a></li>
+        <li><a href="who we are.html">Who we are</a></li>
+        <li><a href="corporate responbility.html">Corporate Responbility</a></li>
+        <li><a href="#">Contact US</a></li>
+        <li><a href="#" class="login-btn">Login</a></li>
       </div>
     </header>
 
@@ -60,7 +80,7 @@
               <li>Free SSL (Security Feature)</li>
               <li>Email (7-15 Users)</li>
             </ul>
-            <button>Book Now</button>
+            <a href="https://api.whatsapp.com/send/?phone=6289675171200&text=Halo%2C+saya+ingin+memesan+paket+Blossom.&type=phone_number&app_absent=0"><button>Book Now</button></a>
           </div>
           <div class="package">
             <h3>Company Website</h3>
@@ -77,7 +97,7 @@
               <li>Free SSL (Security Feature)</li>
               <li>Email (20-50 Users)</li>
             </ul>
-            <button>Book Now</button>
+            <a href="https://api.whatsapp.com/send/?phone=6289675171200&text=Halo%2C+saya+ingin+memesan+paket+Blossom.&type=phone_number&app_absent=0"><button>Book Now</button></a>
           </div>
         </div>
       </div>
@@ -133,6 +153,19 @@
       <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function () {
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+
+          toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+      }
+  </script>
   </body>
 </html>

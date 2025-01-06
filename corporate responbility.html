@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link href="assets/images/Logo.png" rel="icon">
+    <link href="assets/images/Logo.png" rel="apple-touch-icon">
+    <title>Corporate Responbility - Metafora Corp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .nav-links a.active {
+            text-decoration: underline;
+        }
+
+        .auth-buttons button {
+            margin-left: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #777;
+        }
+
+        /* CSR Header */
+        .csr-header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: url("assets/city\ background.jpeg") no-repeat center center/cover;
+            color: #fff;
+        }
+
+        .csr-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .csr-header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Insights Section */
+        .insights {
+            padding: 2rem;
+        }
+
+        .insights h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .insights p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .insights p1 {
+            text-align: left;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .insights h3 {
+            text-align: left;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .csr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .csr-post {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .csr-post img {
+            width: 100%;
+            height: auto;
+        }
+
+        .post-content {
+            padding: 1rem;
+        }
+
+        .post-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-content p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #007bff;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .pagination a.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .pagination a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-content div {
+            flex: 1;
+            margin: 0.5rem;
+            min-width: 200px;
+        }
+
+        .footer-content h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-content ul {
+            list-style: none;
+        }
+
+        .footer-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-content ul a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-content ul a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">METAFORA CORP</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blogs</a></li>
+                <li><a href="who we are.html">Who We Are</a></li>
+                <li><a href="#">Corporate Responsibility</a></li>
+                <li><a href="contact us.html">Contact Us</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login">Login</button>
+                <button class="language">🌐</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CSR Header -->
+    <section class="csr-header">
+        <h1>Our Vision</h1>
+        <p>To be the leading business corporation in Indonesia in advancing knowledge of <br /> business and promoting
+            sustainable and ethical business practices.</p>
+        <button class="cta-button">Our Journey</button>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights">
+        <h2>METAFORA CORP</h2>
+        <p>Metafora Corp is a dynamic and fast-growing holding company in Indonesia with a diverse business portfolio.
+            Established to drive innovation and excellence, Metafora Corp actively operates across a range of
+            industries, including cutting-edge technology, real estate and property development, and retail. With a
+            strong commitment to growth and sustainability, the company continues to expand its reach and impact,
+            making positive contributions to the Indonesian economy and beyond.
+        </p>
+        <h2>Our Corporate Social
+            Responsibility</h2>
+        <div class="csr-grid">
+            <!-- Example CSR Post -->
+            <article class="csr-post">
+                <img src="/assets/images/night-city.jpg" alt="Csr Thumbnail" />
+                <div class="post-content">
+                    <h3>Perusahaan IoT Ini Kembangkan Building Management System</h3>
+                    <p1>December 4, 2024 | By Admin</p1>
+                </div>
+            </article>
+            <!-- Repeat for other csr posts -->
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a href="#">&laquo; First</a>
+        <a href="#">&lt; Previous</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">Next &gt;</a>
+        <a href="#">Last &raquo;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h4>About Us</h4>
+                <p>
+                    Metafora Corp is a Holding Company specializing in technologies,
+                    services, property development, and retail fashion.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Website Services</h4>
+                <ul>
+                    <li><a href="#">Website Development</a></li>
+                    <li><a href="#">Portfolio Website Development</a></li>
+                    <li><a href="#">Price List Website Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Our Company</h4>
+                <p>Telephone: +62 896 6423 0322</p>
+                <p>Email: info@erpco.com</p>
+            </div>
+            <div class="footer-social">
+                <h4>Our Social Media</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
+    </footer>
+</body>
+
+</html>
