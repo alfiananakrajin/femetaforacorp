@@ -29,8 +29,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background-color: #000;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         .navbar .logo {
@@ -49,7 +49,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #fff;
+            color: var(--primary-color);
             font-size: 1rem;
         }
 
@@ -57,12 +57,27 @@
             text-decoration: underline;
         }
 
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #1e1d1d;
+        }
+
+        .dark-theme {
+            --primary-color: #9d9b9b;
+            --secondary-color: #ffffff;
+        }
+
+        #icon {
+            width: 30px;
+            cursor: pointer;
+        }
+
         .auth-buttons button {
             margin-left: 0.5rem;
             padding: 0.5rem 1rem;
             border: none;
-            background-color: #555;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             cursor: pointer;
             border-radius: 5px;
         }
@@ -74,7 +89,7 @@
         /* Hero Section */
         .hero {
             background: url("../femetaforacorp/assets/images/night-city.jpg") no-repeat center center/cover;
-            color: #ffffff;
+            color: var(--primary-color);
             text-align: center;
             padding: 4rem 0;
         }
@@ -82,7 +97,7 @@
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: #ffffff;
+            color: var(--primary-color);
         }
 
         .hero p {
@@ -92,7 +107,7 @@
 
         .cta-buttons button {
             background: #007bff;
-            color: #fff;
+            color: var(--primary-color);
             border: none;
             padding: 0.8rem 1.5rem;
             margin: 0.5rem;
@@ -104,10 +119,30 @@
             background: #0056b3;
         }
 
+        /* Insights Section */
+        .insights {
+            padding: 2rem;
+            background-color: var(--primary-color);
+        }
+
+        .insights h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .insights p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
         /* Footer */
         footer {
-            background-color: #000;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             padding: 2rem;
         }
 
@@ -136,7 +171,7 @@
         }
 
         .footer-content ul a {
-            color: #fff;
+            color: var(--primary-color);
             text-decoration: none;
         }
 
@@ -163,13 +198,14 @@
                 <li><a href="corporate responbility.html">Corporate Responsibility</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
+            <img src="assets/images/moons.png" id="icon">
             <div class="auth-buttons">
                 <button class="login">Login</button>
                 <button class="language">🌐</button>
             </div>
         </nav>
     </header>
-    
+
     <!-- hero section-->
     <section class="hero">
         <div class="container">
@@ -184,6 +220,17 @@
                 <button>Fashion Retail</button>
             </div>
         </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="insights">
+        <h2>METAFORA CORP</h2>
+        <p>Metafora Corp is a dynamic and fast-growing holding company in Indonesia with a diverse business portfolio.
+            Established to drive innovation and excellence, Metafora Corp actively operates across a range of
+            industries, including cutting-edge technology, real estate and property development, and retail. With a
+            strong commitment to growth and sustainability, the company continues to expand its reach and impact, making
+            positive contributions to the Indonesian economy and beyond.
+        </p>
     </section>
 
     <!-- Footer -->
@@ -222,6 +269,17 @@
         </div>
         <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
     </footer>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "assets/images/sun.png";
+            } else {
+                icon.src = "assets/images/moons.png";
+            }
+        }
+    </script>
 </body>
 
 </html>

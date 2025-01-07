@@ -1,215 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!-- Favicon -->
-     <link href="assets/images/Logo.png" rel="icon">
-     <link href="assets/images/Logo.png" rel="apple-touch-icon">
-    <title>Contact US - Metafora Corp</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* General Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link href="assets/images/Logo.png" rel="icon">
+  <link href="assets/images/Logo.png" rel="apple-touch-icon">
+  <title>Contact US - Metafora Corp</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      /* Navbar */
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        background-color: #000;
-        color: #fff;
-      }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
 
-      .navbar .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
 
-      .nav-links {
-        list-style: none;
-        display: flex;
-      }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-      .nav-links li {
-        margin-left: 1.5rem;
-      }
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
 
-      .nav-links a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 1rem;
-      }
+    .nav-links li {
+      margin-left: 1.5rem;
+    }
 
-      .nav-links a.active {
-        text-decoration: underline;
-      }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 1rem;
+    }
 
-      .auth-buttons button {
-        margin-left: 0.5rem;
-        padding: 0.5rem 1rem;
-        border: none;
-        background-color: #555;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 5px;
-      }
+    .nav-links a.active {
+      text-decoration: underline;
+    }
 
-      .auth-buttons button:hover {
-        background-color: #777;
-      }
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #1e1d1d;
+    }
 
-      /* Contact Header */
-      .contact-header {
-        text-align: center;
-        padding: 4rem 2rem;
-        background: url("assets/city\ background.jpeg") no-repeat center center/cover;
-        color: #fff;
-      }
+    .dark-theme {
+      --primary-color: #9d9b9b;
+      --secondary-color: #ffffff;
+    }
 
-      .contact-header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
+    #icon {
+      width: 30px;
+      cursor: pointer;
+    }
 
-      .contact-header p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
+    .auth-buttons button {
+      margin-left: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-      .cta-button {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        color: #fff;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+    .auth-buttons button:hover {
+      background-color: #777;
+    }
 
-      .cta-button:hover {
-        background-color: #0056b3;
-      }
+    /* Contact Header */
+    .contact-header {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: url("assets/city\ background.jpeg") no-repeat center center/cover;
+      color: var(--primary-color);
+    }
 
-      /* Footer */
-      footer {
-        background-color: #000;
-        color: #fff;
-        padding: 2rem;
-      }
+    .contact-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
 
-      .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+    .contact-header p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+    }
 
-      .footer-content div {
-        flex: 1;
-        margin: 0.5rem;
-        min-width: 200px;
-      }
+    .cta-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-      .footer-content h4 {
-        margin-bottom: 1rem;
-      }
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
 
-      .footer-content ul {
-        list-style: none;
-      }
+    /* Footer */
+    footer {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 2rem;
+    }
 
-      .footer-content ul li {
-        margin-bottom: 0.5rem;
-      }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-      .footer-content ul a {
-        color: #fff;
-        text-decoration: none;
-      }
+    .footer-content div {
+      flex: 1;
+      margin: 0.5rem;
+      min-width: 200px;
+    }
 
-      .footer-content ul a:hover {
-        text-decoration: underline;
-      }
+    .footer-content h4 {
+      margin-bottom: 1rem;
+    }
 
-      .footer-copyright {
-        text-align: center;
-        margin-top: 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">METAFORA CORP</div>
-        <ul class="nav-links">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="blog.html" class="active">Blogs</a></li>
-          <li><a href="who we are.html">Who We Are</a></li>
-          <li><a href="corporate responbility.html">Corporate Responsibility</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="auth-buttons">
-          <button class="login">Login</button>
-          <button class="language">🌐</button>
-        </div>
-      </nav>
-    </header>
+    .footer-content ul {
+      list-style: none;
+    }
 
-    <!-- Contact Header -->
-    <section class="contact-header">
-      <h1>Connect With Us</h1>
-      <p>We love to hear from you, lets connect with us to collaborate something <br /> project or make something partnership business.</p>
-      <button class="cta-button">Our Journey</button>
-    </section>
+    .footer-content ul li {
+      margin-bottom: 0.5rem;
+    }
 
-   
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-about">
-          <h4>About Us</h4>
-          <p>
-            Metafora Corp is a Holding Company specializing in technologies,
-            services, property development, and retail fashion.
-          </p>
-          <p1>© 2021-2024</p1>
-        </div>
-        <div class="footer-links">
-          <h4>Website Services</h4>
-          <ul>
-            <li><a href="#">Website Development</a></li>
-            <li><a href="#">Portfolio Website Development</a></li>
-            <li><a href="#">Price List Website Development</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Our Company</h4>
-          <p>Telephone: +62 896 6423 0322</p>
-          <p>Email: info@erpco.com</p>
-        </div>
-        <div class="footer-social">
-          <h4>Our Social Media</h4>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ul>
-        </div>
+    .footer-content ul a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .footer-content ul a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-copyright {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">METAFORA CORP</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="blog.html" class="active">Blogs</a></li>
+        <li><a href="who we are.html">Who We Are</a></li>
+        <li><a href="corporate responbility.html">Corporate Responsibility</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <img src="assets/images/moons.png" id="icon">
+      <div class="auth-buttons">
+        <button class="login">Login</button>
+        <button class="language">🌐</button>
       </div>
-      <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
-    </footer>
-  </body>
+    </nav>
+  </header>
+
+  <!-- Contact Header -->
+  <section class="contact-header">
+    <h1>Connect With Us</h1>
+    <p>We love to hear from you, lets connect with us to collaborate something <br /> project or make something
+      partnership business.</p>
+    <button class="cta-button">Our Journey</button>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h4>About Us</h4>
+        <p>
+          Metafora Corp is a Holding Company specializing in technologies,
+          services, property development, and retail fashion.
+        </p>
+        <p1>© 2021-2024</p1>
+      </div>
+      <div class="footer-links">
+        <h4>Website Services</h4>
+        <ul>
+          <li><a href="#">Website Development</a></li>
+          <li><a href="#">Portfolio Website Development</a></li>
+          <li><a href="#">Price List Website Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Our Company</h4>
+        <p>Telephone: +62 896 6423 0322</p>
+        <p>Email: info@erpco.com</p>
+      </div>
+      <div class="footer-social">
+        <h4>Our Social Media</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
+  </footer>
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "assets/images/sun.png";
+      } else {
+        icon.src = "assets/images/moons.png";
+      }
+    }
+  </script>
+</body>
+
 </html>

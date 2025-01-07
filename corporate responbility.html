@@ -29,8 +29,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
-            background-color: #000;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         .navbar .logo {
@@ -49,7 +49,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #fff;
+            color: var(--primary-color);
             font-size: 1rem;
         }
 
@@ -57,12 +57,27 @@
             text-decoration: underline;
         }
 
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #1e1d1d;
+        }
+
+        .dark-theme {
+            --primary-color: #9d9b9b;
+            --secondary-color: #ffffff;
+        }
+
+        #icon {
+            width: 30px;
+            cursor: pointer;
+        }
+
         .auth-buttons button {
             margin-left: 0.5rem;
             padding: 0.5rem 1rem;
             border: none;
-            background-color: #555;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             cursor: pointer;
             border-radius: 5px;
         }
@@ -76,17 +91,19 @@
             text-align: center;
             padding: 4rem 2rem;
             background: url("assets/city\ background.jpeg") no-repeat center center/cover;
-            color: #fff;
+            color: var(--primary-color);
         }
 
         .csr-header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         .csr-header p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            color: var(--primary-color);
         }
 
         .cta-button {
@@ -106,6 +123,7 @@
         /* Insights Section */
         .insights {
             padding: 2rem;
+            background-color: var(--primary-color);
         }
 
         .insights h2 {
@@ -139,8 +157,8 @@
         }
 
         .csr-post {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
+            background: var(--secondary-color);
+            border: 1px solid var(--primary-color);
             border-radius: 5px;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -162,7 +180,7 @@
 
         .post-content p {
             font-size: 0.9rem;
-            color: #555;
+            color: var(--secondary-color);
         }
 
         /* Pagination */
@@ -178,24 +196,25 @@
             color: #007bff;
             padding: 0.5rem 1rem;
             margin: 0 0.25rem;
-            border: 1px solid #ddd;
+            border: 1px solid var(--secondary-color);
             border-radius: 5px;
         }
 
         .pagination a.active {
             background-color: #007bff;
-            color: #fff;
+            color: var(--primary-color);
         }
 
         .pagination a:hover {
             background-color: #0056b3;
-            color: #fff;
+            color: var(--primary-color);
         }
+
 
         /* Footer */
         footer {
-            background-color: #000;
-            color: #fff;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
             padding: 2rem;
         }
 
@@ -224,7 +243,7 @@
         }
 
         .footer-content ul a {
-            color: #fff;
+            color: var(--primary-color);
             text-decoration: none;
         }
 
@@ -251,6 +270,7 @@
                 <li><a href="#">Corporate Responsibility</a></li>
                 <li><a href="contact us.html">Contact Us</a></li>
             </ul>
+            <img src="assets/images/moons.png" id="icon">
             <div class="auth-buttons">
                 <button class="login">Login</button>
                 <button class="language">🌐</button>
@@ -339,6 +359,17 @@
         </div>
         <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
     </footer>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "assets/images/sun.png";
+            } else {
+                icon.src = "assets/images/moons.png";
+            }
+        }
+    </script>
 </body>
 
 </html>

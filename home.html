@@ -52,8 +52,8 @@
 
     /* Header Styles */
     .main-header {
-      background: #111;
-      color: #fff;
+      background: var(--secondary-color);
+      color: var(--primary-color);
       padding: 1rem 0;
     }
 
@@ -75,12 +75,27 @@
     }
 
     .navbar .a {
-      color: #fff;
+      color: var(--secondary-color);
       text-decoration: none;
     }
 
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #1e1d1d;
+    }
+
+    .dark-theme {
+      --primary-color: #9d9b9b;
+      --secondary-color: #ffffff;
+    }
+
+    #icon {
+      width: 30px;
+      cursor: pointer;
+    }
+
     .navbar .toggle_btn {
-      color: #fff;
+      color: var(--secondary-color);
       font-size: 1.5rem;
       cursor: pointer;
       display: none;
@@ -88,7 +103,7 @@
 
     .header-actions button {
       background: #C9D6DF;
-      color: #fff;
+      color: var(--secondary-color);
       border: none;
       padding: 0.5rem 1rem;
       cursor: pointer;
@@ -102,7 +117,7 @@
 
     .login-btn:hover {
       scale: 1.05;
-      color: #fff;
+      color: var(--secondary-color);
     }
 
     .login-btn:active {
@@ -143,8 +158,8 @@
 
     /* Hero Section */
     .hero {
-      background: url("../femetaforacorp/assets/images/night-city.jpg") no-repeat center center/cover;
-      color: #fff;
+      background: url("../femetaforacorp/assets/images/night-city.jpg") no-repeat center center/cover var(--primary-color);
+      color: var(--primary-color);
       text-align: center;
       padding: 4rem 0;
     }
@@ -152,7 +167,7 @@
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #fff;
+      color: var(--primary-color);
     }
 
     .hero p {
@@ -162,7 +177,7 @@
 
     .cta-buttons button {
       background: #007bff;
-      color: #fff;
+      color: var(--primary-color);
       border: none;
       padding: 0.8rem 1.5rem;
       margin: 0.5rem;
@@ -178,7 +193,7 @@
     .services {
       padding: 3rem 0;
       text-align: center;
-      background: #f9f9f9;
+      background: var(--primary-color);
     }
 
     .services h2 {
@@ -200,7 +215,7 @@
     }
 
     .package {
-      background: #fff;
+      background: var(--primary-color);
       border: 1px solid #ddd;
       border-radius: 10px;
       padding: 1.5rem;
@@ -224,7 +239,7 @@
 
     .package button {
       background: #28a745;
-      color: #fff;
+      color: var(--primary-color);
       border: none;
       padding: 0.8rem 1.5rem;
       border-radius: 5px;
@@ -255,8 +270,9 @@
     }
 
     .benefit {
-      background: #fff;
-      border: 1px solid #ddd;
+      background: var(--secondary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
       padding: 1rem;
       border-radius: 10px;
       width: 250px;
@@ -281,8 +297,8 @@
     }
 
     .corporation {
-      background: #878787;
-      border: 1px solid #ddd;
+      background: var(--secondary-color);
+      border: 1px solid var(--primary-color);
       padding: 1rem;
       border-radius: 10px;
       width: 250px;
@@ -291,48 +307,48 @@
 
     /* Footer */
     footer {
-        background-color: #000;
-        color: #fff;
-        padding: 2rem;
-      }
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 2rem;
+    }
 
-      .footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-      .footer-content div {
-        flex: 1;
-        margin: 0.5rem;
-        min-width: 200px;
-      }
+    .footer-content div {
+      flex: 1;
+      margin: 0.5rem;
+      min-width: 200px;
+    }
 
-      .footer-content h4 {
-        margin-bottom: 1rem;
-      }
+    .footer-content h4 {
+      margin-bottom: 1rem;
+    }
 
-      .footer-content ul {
-        list-style: none;
-      }
+    .footer-content ul {
+      list-style: none;
+    }
 
-      .footer-content ul li {
-        margin-bottom: 0.5rem;
-      }
+    .footer-content ul li {
+      margin-bottom: 0.5rem;
+    }
 
-      .footer-content ul a {
-        color: #fff;
-        text-decoration: none;
-      }
+    .footer-content ul a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
 
-      .footer-content ul a:hover {
-        text-decoration: underline;
-      }
+    .footer-content ul a:hover {
+      text-decoration: underline;
+    }
 
-      .footer-copyright {
-        text-align: center;
-        margin-top: 2rem;
-      }
+    .footer-copyright {
+      text-align: center;
+      margin-top: 2rem;
+    }
 
     /* Responsive Design */
     @media (max-width: 992px) {
@@ -373,6 +389,7 @@
           <li><a href="contact us.html">Contact Us</a></li>
         </ul>
       </nav>
+      <img src="assets/images/moons.png" id="icon">
       <div class="header-actions">
         <button class="login-btn">Login</button>
         <div class="toggle_btn">
@@ -472,7 +489,8 @@
   <section class="corporations">
     <div class="container">
       <h2>Our Corporation</h2>
-      <p>During this one decade, the idmetafora company has had several subsidiaries that have <br /> grown from year to year to build a business based on the ERP system.</p>
+      <p>During this one decade, the idmetafora company has had several subsidiaries that have <br /> grown from year to
+        year to build a business based on the ERP system.</p>
       <div class="corporations-grid">
         <div class="corporation"><img src="assets/images/annisadev.png" alt="" srcset=""></div>
         <div class="corporation"><img src="assets/images/deriota.png" alt="" srcset=""></div>
@@ -520,6 +538,18 @@
     </div>
     <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
   </footer>
+
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "assets/images/sun.png";
+      } else {
+        icon.src = "assets/images/moons.png";
+      }
+    }
+  </script>
 
   <script>
     const toggleBtn = document.querySelector('.toggle_btn')
