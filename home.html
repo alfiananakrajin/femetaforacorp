@@ -1,171 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Favicon -->
-    <link href="assets/images/Logo.png" rel="icon">
-    <link href="assets/images/Logo.png" rel="apple-touch-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Metafora Corp</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <header class="main-header">
-      <div class="container">
-        <div class="logo">Metafora Corp</div>
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="blog.html">Blogs</a></li>
-            <li><a href="who we are.html">Who We Are</a></li>
-            <li><a href="corporate responbility.html">Corporate Responsibility</a></li>
-            <li><a href="contact us.html">Contact Us</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <button class="login-btn">Login</button>
-          <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <button class="language-btn">🌐</button>
-        </div>
-      </div>
-    
-      <div class="dropdown_menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-        <li><a href="who we are.html">Who we are</a></li>
-        <li><a href="corporate responbility.html">Corporate Responbility</a></li>
-        <li><a href="#">Contact US</a></li>
-        <li><a href="#" class="login-btn">Login</a></li>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link href="assets/images/Logo.png" rel="icon">
+  <link href="assets/images/Logo.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Metafora Corp</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* General Styles */
+    body {
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 1.6;
+      color: #333;
+    }
 
-    <section class="hero">
-      <div class="container">
-        <h1>Metafora Corp</h1>
-        <p>
-          Metafora Corp is an ERP Developer Company based in Central Java,
-          Indonesia, that is active in several industries.
-        </p>
-        <div class="cta-buttons">
-          <button>Technologies</button>
-          <button>Property</button>
-          <button>Fashion Retail</button>
-        </div>
-      </div>
-    </section>
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-    <section class="services">
-      <div class="container">
-        <h2>Website Service Packages From Our Company</h2>
-        <div class="packages">
-          <div class="package">
-            <h3>Business/E-Commerce</h3>
-            <p>Rp 420,000 per month</p>
-            <ul>
-              <li>Free Domain (.com/.my.id, etc)</li>
-              <li>SSL / HTTPS (Free)</li>
-              <li>Hosting (Free 3 Months)</li>
-              <li>Design Responsive (Free)</li>
-              <li>SEO (Basic)</li>
-              <li>Page (6-8)</li>
-              <li>Bandwidth (30GB)</li>
-              <li>Social Media Integrated (Free)</li>
-              <li>Free SSL (Security Feature)</li>
-              <li>Email (7-15 Users)</li>
-            </ul>
-            <a href="https://api.whatsapp.com/send/?phone=6289675171200&text=Halo%2C+saya+ingin+memesan+paket+Blossom.&type=phone_number&app_absent=0"><button>Book Now</button></a>
-          </div>
-          <div class="package">
-            <h3>Company Website</h3>
-            <p>Rp 860,000 per month</p>
-            <ul>
-              <li>Free Domain (.com/.my.id, etc)</li>
-              <li>SSL / HTTPS (Free)</li>
-              <li>Hosting (Free 1 Year)</li>
-              <li>Design Responsive (Free)</li>
-              <li>SEO (Basic)</li>
-              <li>Page (10-20)</li>
-              <li>Bandwidth (Unlimited)</li>
-              <li>Social Media Integrated (Free)</li>
-              <li>Free SSL (Security Feature)</li>
-              <li>Email (20-50 Users)</li>
-            </ul>
-            <a href="https://api.whatsapp.com/send/?phone=6289675171200&text=Halo%2C+saya+ingin+memesan+paket+Blossom.&type=phone_number&app_absent=0"><button>Book Now</button></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    h1,
+    h2,
+    h3 {
+      color: #222;
+    }
 
-    <section class="benefits">
-      <div class="container">
-        <h2>Benefits Of Our Company</h2>
-        <div class="benefits-grid">
-          <div class="benefit">Business Innovation</div>
-          <div class="benefit">Cheap Price</div>
-          <div class="benefit">Trusted & Safe</div>
-          <div class="benefit">SEO Optimization</div>
-          <div class="benefit">Design Responsive</div>
-          <div class="benefit">Free Consultation</div>
-        </div>
-      </div>
-    </section>
+    li {
+      list-style: none;
+    }
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-about">
-          <h4>About Us</h4>
-          <p>
-            Metafora Corp is a Holding Company specializing in technologies,
-            services, property development, and retail fashion.
-          </p>
-        </div>
-        <div class="footer-links">
-          <h4>Website Services</h4>
-          <ul>
-            <li><a href="#">Website Development</a></li>
-            <li><a href="#">Portfolio Website Development</a></li>
-            <li><a href="#">Price List Website Development</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Our Company</h4>
-          <p>Telephone: +62 896 6423 0322</p>
-          <p>Email: info@erpco.com</p>
-        </div>
-        <div class="footer-social">
-          <h4>Our Social Media</h4>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
-    </footer>
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+    }
 
-    <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('.toggle_btn i')
-      const dropDownMenu = document.querySelector('.dropdown_menu')
+    a:hover {
+      color: aqua;
+    }
 
-      toggleBtn.onclick = function () {
-          dropDownMenu.classList.toggle('open')
-          const isOpen = dropDownMenu.classList.contains('open')
+    /* Header Styles */
+    .main-header {
+      background: #111;
+      color: #fff;
+      padding: 1rem 0;
+    }
 
-          toggleBtnIcon.classList = isOpen
-              ? 'fa-solid fa-xmark'
-              : 'fa-solid fa-bars'
+    .main-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .navbar .a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar .toggle_btn {
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .header-actions button {
+      background: #C9D6DF;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .header-actions button:hover {
+      background: #333;
+    }
+
+    .login-btn:hover {
+      scale: 1.05;
+      color: #fff;
+    }
+
+    .login-btn:active {
+      scale: 0.5;
+    }
+
+    /* Dropdown Menu */
+    .dropdown_menu {
+      display: none;
+      position: absolute;
+      right: 3rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(6, 6, 6, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .dropdown_menu li {
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dropdown_menu .login-btn {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dropdown_menu.open {
+      height: 300px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("../femetaforacorp/assets/images/night-city.jpg") no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-buttons button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta-buttons button:hover {
+      background: #0056b3;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 3rem 0;
+      text-align: center;
+      background: #f9f9f9;
+    }
+
+    .services h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .assets images {
+      display: flex;
+      size: 20px;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .packages {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .package {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: left;
+      width: 300px;
+    }
+
+    .package h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .package ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .package ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .package button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .package button:hover {
+      background: #218838;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .benefits h2 {
+      margin-bottom: 2rem;
+    }
+
+    .benefits-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .benefit {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+    }
+
+    /* Corporations Section */
+    .corporations {
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .corporations h2 {
+      margin-bottom: 2rem;
+    }
+
+    .corporations-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .corporation {
+      background: #878787;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 2rem;
       }
+
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .footer-content div {
+        flex: 1;
+        margin: 0.5rem;
+        min-width: 200px;
+      }
+
+      .footer-content h4 {
+        margin-bottom: 1rem;
+      }
+
+      .footer-content ul {
+        list-style: none;
+      }
+
+      .footer-content ul li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-content ul a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-content ul a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+
+      .nav .navbar,
+      .nav .login-btn {
+        display: none;
+      }
+
+      .nav .toggle_btn {
+        display: block;
+      }
+
+      .dropdown_menu {
+        display: block;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .dropdown_menu {
+        left: 2rem;
+        width: unset;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">Metafora Corp</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="who we are.html">Who We Are</a></li>
+          <li><a href="corporate responbility.html">Corporate Responsibility</a></li>
+          <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="login-btn">Login</button>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <button class="language-btn">🌐</button>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="blog.html">Blogs</a></li>
+      <li><a href="who we are.html">Who we are</a></li>
+      <li><a href="corporate responbility.html">Corporate Responbility</a></li>
+      <li><a href="#">Contact US</a></li>
+      <li><a href="#" class="login-btn">Login</a></li>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Metafora Corp</h1>
+      <p>
+        Metafora Corp is an ERP Developer Company based in Central Java,
+        Indonesia, that is active in several industries.
+      </p>
+      <div class="cta-buttons">
+        <button>Technologies</button>
+        <button>Property</button>
+        <button>Fashion Retail</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h2>Website Service Packages From Our Company</h2>
+      <div class="packages">
+        <div class="package">
+          <img src="assets/world.png" alt="" srcset="">
+          <h3>Business/E-Commerce</h3>
+          <p>Rp 420,000 per month</p>
+          <ul>
+            <li>Free Domain (.com/.my.id, etc)</li>
+            <li>SSL / HTTPS (Free)</li>
+            <li>Hosting (Free 3 Months)</li>
+            <li>Design Responsive (Free)</li>
+            <li>SEO (Basic)</li>
+            <li>Page (6-8)</li>
+            <li>Bandwidth (30GB)</li>
+            <li>Social Media Integrated (Free)</li>
+            <li>Free SSL (Security Feature)</li>
+            <li>Email (7-15 Users)</li>
+          </ul>
+          <a
+            href="https://api.whatsapp.com/send/?phone=6289675171200&text=Halo%2C+saya+ingin+memesan+paket+Blossom.&type=phone_number&app_absent=0"><button>Book
+              Now</button></a>
+        </div>
+        <div class="package">
+          <img src="assets/images/corporation.png" alt="" srcset="">
+          <h3>Company Website</h3>
+          <p>Rp 860,000 per month</p>
+          <ul>
+            <li>Free Domain (.com/.my.id, etc)</li>
+            <li>SSL / HTTPS (Free)</li>
+            <li>Hosting (Free 1 Year)</li>
+            <li>Design Responsive (Free)</li>
+            <li>SEO (Basic)</li>
+            <li>Page (10-20)</li>
+            <li>Bandwidth (Unlimited)</li>
+            <li>Social Media Integrated (Free)</li>
+            <li>Free SSL (Security Feature)</li>
+            <li>Email (20-50 Users)</li>
+          </ul>
+          <a
+            href="https://api.whatsapp.com/send/?phone=6289675171200&text=Halo%2C+saya+ingin+memesan+paket+Blossom.&type=phone_number&app_absent=0"><button>Book
+              Now</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <h2>Benefits Of Our Company</h2>
+      <div class="benefits-grid">
+        <div class="benefit"><img src="assets/images/lamp.png" alt="" srcset="">Business Innovation</div>
+        <div class="benefit"><img src="assets/images/cheap.png" alt="" srcset="">Cheap Price</div>
+        <div class="benefit"><img src="assets/images/protect.png" alt="" srcset="">Trusted & Safe</div>
+        <div class="benefit"><img src="assets/images/search.png" alt="" srcset="">SEO Optimization</div>
+        <div class="benefit"><img src="assets/images/design responsive.png" alt="" srcset="">Design Responsive</div>
+        <div class="benefit"><img src="assets/images/consultant.png" alt="" srcset="">Free Consultation</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="corporations">
+    <div class="container">
+      <h2>Our Corporation</h2>
+      <p>During this one decade, the idmetafora company has had several subsidiaries that have <br /> grown from year to year to build a business based on the ERP system.</p>
+      <div class="corporations-grid">
+        <div class="corporation"><img src="assets/images/annisadev.png" alt="" srcset=""></div>
+        <div class="corporation"><img src="assets/images/deriota.png" alt="" srcset=""></div>
+        <div class="corporation"><img src="assets/images/ova.png" alt="" srcset=""></div>
+        <div class="corporation"><img src="assets/images/erporio.png" alt="" srcset=""></div>
+        <div class="corporation"><img src="assets/images/mahafidz.png" alt="" srcset=""></div>
+        <div class="corporation"><img src="assets/images/societect.png" alt="" srcset=""></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-about">
+        <h4>About Us</h4>
+        <p>
+          Metafora Corp is a Holding Company specializing in technologies,
+          services, property development, and retail fashion.
+        </p>
+        <p1>© 2021-2024</p1>
+      </div>
+      <div class="footer-links">
+        <h4>Website Services</h4>
+        <ul>
+          <li><a href="#">Website Development</a></li>
+          <li><a href="#">Portfolio Website Development</a></li>
+          <li><a href="#">Price List Website Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Our Company</h4>
+        <p>Telephone: +62 896 6423 0322</p>
+        <p>Email: info@erpco.com</p>
+      </div>
+      <div class="footer-social">
+        <h4>Our Social Media</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copyright">&copy; 2024 Metafora Corporation</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    }
   </script>
-  </body>
+</body>
+
 </html>
